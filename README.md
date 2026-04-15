@@ -71,3 +71,36 @@ export default defineConfig([
   },
 ])
 ```
+
+===================================================================================
+
+
+# Internet Magazine
+
+This is an e-commerce project built with React + TypeScript + Tailwind.
+
+## Features
+- Product list
+- Cart
+- Wishlist
+- Responsive design
+
+## Installation
+npm install
+npm run dev
+
+## Author
+Shahobiddinzoda Firuz
+
+
+-----------------------------------------------------------------------------------------
+
+
+A full-featured e-commerce SPA built with React 19, TypeScript, Vite, Tailwind CSS, Zustand, and i18next — supporting English, Russian & Tajik languages, dark mode, cart, wishlist, checkout, and product detail pages.
+
+
+------------------------------------------------------------------------------------------
+
+
+
+
