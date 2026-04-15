@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useTodo } from '../store/Todo'
 import { useParams } from 'react-router-dom'
 

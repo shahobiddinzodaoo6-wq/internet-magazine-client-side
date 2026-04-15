@@ -1,4 +1,5 @@
-import { FC, useState } from "react"
+import type { FC } from "react"
+import { useState } from "react"
 import { Eye, EyeOff } from "lucide-react"
 import { Link } from "react-router"
 import { useTranslation } from "react-i18next"

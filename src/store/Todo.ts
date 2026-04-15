@@ -1,11 +1,5 @@
 import axios from 'axios'
-import { useParams } from 'react-router'
 import { create } from 'zustand'
-
-interface SubCategory {
-    id: number
-    subCategoryName: string
-}
 
 interface Category {
     id: number
@@ -14,14 +8,14 @@ interface Category {
     categoryImage: string
     categoryName: string,
     totalRecord: number,
-
 }
 
 interface CategoryState {
     data: Category[]
+    product: any | null
+    getProducts: () => Promise<void>
+    infoUser: (id: number) => Promise<void>
 }
-
-
 
 const urlInfo = "https://store-api.softclub.tj/Product/get-product-by-id"
 
@@ -42,7 +36,7 @@ export const useTodo = create<CategoryState>((set) => ({
 
     infoUser: async (id: number) => {
         try {
-            let { data } = await axios.get(`${urlInfo}?id=${id}`)
+            const { data } = await axios.get(`${urlInfo}?id=${id}`)
             set({ product: data.data })
         } catch (error) {
             console.error(error);

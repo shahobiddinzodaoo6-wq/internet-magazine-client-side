@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '../assets/Group 1116606595.png'
 import serch from '../assets/Component 2.png'
 import IconSend from '../assets/icon-send.png'
@@ -12,7 +11,6 @@ import { User, LogOut, Globe, Menu, X, Home, Phone, Info, UserPlus, Heart } from
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "antd"
 import type { MenuProps } from "antd"
-import logo from '../assets/Logo.png'
 import { ModeToggle } from '../components/ui/ModeToggle'
 import { IoIosHeartEmpty } from "react-icons/io";
 import { CiUser } from "react-icons/ci";

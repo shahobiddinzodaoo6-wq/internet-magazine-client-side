@@ -38,7 +38,7 @@ const Wishlist = () => {
             </p>
             <Rating
               name="simple-uncontrolled"
-              onChange={(event, newValue) => {
+              onChange={(_event, newValue) => {
                 console.log(newValue);
               }}
               defaultValue={3}

@@ -18,7 +18,7 @@ import servise from "../assets/Services.png"
 import servise2 from "../assets/Services (1).png"
 import servise3 from "../assets/Services (2).png"
 import { Link } from "react-router"
-import { toggleWishlist, isInWishlist, getWishlist } from "../utils/wishlist"
+import { toggleWishlist, getWishlist } from "../utils/wishlist"
 import { addToCart } from "../utils/cart"
 
 import { useTranslation } from "react-i18next";
@@ -252,7 +252,7 @@ const HomePage = () => {
 
                                         <Rating
                                             name="simple-uncontrolled"
-                                            onChange={(event, newValue) => {
+                                            onChange={(_event, newValue) => {
                                                 console.log(newValue);
                                             }}
                                             defaultValue={2}
@@ -414,7 +414,7 @@ const HomePage = () => {
 
                                         <Rating
                                             name="simple-uncontrolled"
-                                            onChange={(event, newValue) => {
+                                            onChange={(_event, newValue) => {
                                                 console.log(newValue);
                                             }}
                                             defaultValue={2}
@@ -516,7 +516,7 @@ const HomePage = () => {
 
                                 <Rating
                                     name="simple-uncontrolled"
-                                    onChange={(event, newValue) => {
+                                    onChange={(_event, newValue) => {
                                         console.log(newValue);
                                     }}
                                     defaultValue={2}

@@ -1,6 +1,6 @@
 import Rating from '@mui/material/Rating';
 import { Eye, Heart } from 'lucide-react';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTodo } from '../store/Todo';
 import { Link } from 'react-router';
 import { toggleWishlist, getWishlist } from "../utils/wishlist"
@@ -303,7 +303,7 @@ const ProductDetailsPage = () => {
 
                 <Rating
                   name="simple-uncontrolled"
-                  onChange={(event, newValue) => {
+                  onChange={(_event, newValue) => {
                     console.log(newValue);
                   }}
                   defaultValue={3}
