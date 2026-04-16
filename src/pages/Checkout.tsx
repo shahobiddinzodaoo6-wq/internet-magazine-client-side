@@ -22,6 +22,7 @@ const Checkout = () => {
     0
   )
 
+
   return (
     <div className="max-w-[1200px] mx-auto mb-[250px] mt-[200px] px-4">
 
@@ -62,6 +63,7 @@ const Checkout = () => {
         {/* RIGHT */}
         <div className="w-[400px] max-sm:w-full">
 
+
           {/* PRODUCTS (ТОЛЬКО 2) */}
           <div className="space-y-5">
 
@@ -75,6 +77,7 @@ const Checkout = () => {
                   />
                   <span>{item.productName}</span>
                 </div>
+
 
                 <span>
                   $
@@ -106,6 +109,7 @@ const Checkout = () => {
             </div>
 
           </div>
+          
 
           {/* PAYMENT */}
           <div className="mt-6 space-y-3">

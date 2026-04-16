@@ -1,6 +1,7 @@
 import * as React from "react"
 
-import { cn } from "@/lib/utils"
+// Fallback cn function if @/lib/utils is not available
+const cn = (...classes: any[]) => classes.filter(Boolean).join(" ")
 
 function Card({
   className,

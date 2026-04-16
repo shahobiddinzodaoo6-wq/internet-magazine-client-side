@@ -1,4 +1,3 @@
-import React from 'react'
 import image from "../assets/Side Image.png"
 import Category from '../assets/Services (3).png'
 import Category2 from '../assets/Services (4).png'

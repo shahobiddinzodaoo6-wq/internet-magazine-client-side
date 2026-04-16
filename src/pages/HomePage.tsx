@@ -384,6 +384,7 @@ const HomePage = () => {
                                                 alt={item.productName}
                                                 className="max-h-[160px] object-contain transition group-hover:scale-105"
                                             />
+
                                         </div>
                                         <button
                                             onClick={() => {
@@ -394,6 +395,7 @@ const HomePage = () => {
                                             Add To Cart
                                         </button>
                                     </div>
+                                    
 
                                     <div className="pt-4">
                                         <h3 className="text-base font-medium">
