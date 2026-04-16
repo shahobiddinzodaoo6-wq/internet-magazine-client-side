@@ -17,6 +17,7 @@ const ProductDetailsPage = () => {
 
 
   const [wishlistIds, setWishlistIds] = useState<number[]>([])
+  
 
   useEffect(() => {
     getProducts()

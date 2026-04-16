@@ -19,6 +19,7 @@ interface CategoryState {
 
 const urlInfo = "https://store-api.softclub.tj/Product/get-product-by-id"
 
+
 export const useTodo = create<CategoryState>((set) => ({
     data: [],
     product: null,

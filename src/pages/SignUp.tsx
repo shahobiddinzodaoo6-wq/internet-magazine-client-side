@@ -68,6 +68,7 @@ const SignUp: FC = () => {
           />
           {t('signUpGoogleBtn')}
         </button>
+        
 
         {/* FOOTER */}
         <p className="text-sm text-gray-500 text-center">

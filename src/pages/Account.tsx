@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
 const Account = () => {
+  
   const { t } = useTranslation()
   return (
     <>

@@ -17,6 +17,7 @@ const Cart = () => {
         ? { ...item, quantity: value }
         : item
     )
+    
 
     localStorage.setItem("cart", JSON.stringify(cart))
     setData(cart)
