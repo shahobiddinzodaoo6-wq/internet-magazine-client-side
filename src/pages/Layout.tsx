@@ -48,6 +48,7 @@ const Layout = () => {
             const cart = getCart()
             setCount(wishlist.length)
             setCartCount(cart.length)
+
         }
         update()
         window.addEventListener("storage", update)
@@ -64,6 +65,7 @@ const Layout = () => {
                 </Link>
             ),
         },
+
         {
             key: "2",
             label: (
@@ -76,6 +78,7 @@ const Layout = () => {
             ),
         },
     ]
+
 
     const navLinks = [
         { to: '/', icon: <Home size={18} />, label: t('home') },
@@ -329,4 +332,7 @@ const Layout = () => {
     )
 }
 
+
 export default Layout
+
+

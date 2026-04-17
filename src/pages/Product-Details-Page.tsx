@@ -19,6 +19,7 @@ const ProductDetailsPage = () => {
   const [wishlistIds, setWishlistIds] = useState<number[]>([])
   
 
+
   useEffect(() => {
     getProducts()
     const data = getWishlist()
@@ -310,6 +311,7 @@ const ProductDetailsPage = () => {
                   defaultValue={3}
                 />
               </div>
+
 
             </div>
           ))}

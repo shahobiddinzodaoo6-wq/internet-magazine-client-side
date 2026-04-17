@@ -22,6 +22,8 @@ const Info = () => {
   }
   
 
+
+
   return (
     <div className="max-w-[1200px] mx-auto mt-[100px] px-4">
       <div className="flex gap-[50px] max-sm:flex-col max-sm:items-center">
@@ -67,3 +69,6 @@ const Info = () => {
 }
 
 export default Info
+
+
+

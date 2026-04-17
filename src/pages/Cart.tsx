@@ -21,6 +21,7 @@ const Cart = () => {
 
     localStorage.setItem("cart", JSON.stringify(cart))
     setData(cart)
+
   }
 
   const remove = (id: number) => {
@@ -30,6 +31,7 @@ const Cart = () => {
   }
 
   const subtotal = data.reduce(
+
     (acc, item) =>
       acc + (item.hasDiscount ? item.discountPrice : item.price) * item.quantity,
     0
@@ -44,6 +46,7 @@ const Cart = () => {
       <div className="space-y-4">
 
         {data.map((item) => (
+          
           <div
             key={item.id}
             className="flex max-sm:flex-col items-center justify-between bg-white dark:bg-gray-800 shadow p-4 rounded max-sm:gap-4"

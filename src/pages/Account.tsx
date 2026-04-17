@@ -14,6 +14,7 @@ const Account = () => {
 
         <div className="flex gap-[80px] max-sm:flex-col max-sm:gap-6">
 
+
           {/* LEFT MENU */}
           <div className="w-[250px] text-sm max-sm:w-full max-sm:flex max-sm:overflow-x-auto max-sm:gap-6">
 
@@ -94,3 +95,16 @@ const Account = () => {
 }
 
 export default Account
+
+
+
+
+
+
+
+
+
+
+
+
+
