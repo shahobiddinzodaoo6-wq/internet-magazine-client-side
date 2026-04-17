@@ -26,6 +26,8 @@ const translations = {
   }
 };
 
+
+
 const localesDir = path.join(__dirname, 'src', 'locales');
 
 ['en', 'ru', 'tj'].forEach(lang => {
