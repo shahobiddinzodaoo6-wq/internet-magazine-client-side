@@ -16,6 +16,7 @@ const Wishlist = () => {
     setData(getWishlist())
   }
   
+  
 
   return (
     <div className="max-w-[1200px] mx-auto mt-[100px] px-4">

@@ -70,6 +70,8 @@ const SignUp: FC = () => {
         </button>
         
 
+
+
         {/* FOOTER */}
         <p className="text-sm text-gray-500 text-center">
           {t('alreadyHaveAccount')}{" "}

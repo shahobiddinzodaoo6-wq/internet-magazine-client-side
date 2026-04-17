@@ -17,6 +17,7 @@ interface CategoryState {
     infoUser: (id: number) => Promise<void>
 }
 
+
 const urlInfo = "https://store-api.softclub.tj/Product/get-product-by-id"
 
 

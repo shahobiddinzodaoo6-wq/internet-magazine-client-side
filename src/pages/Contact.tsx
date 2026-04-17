@@ -19,6 +19,7 @@ const Contact: FC = () => {
         <div className="flex gap-8 max-md:flex-col">
 
           {/* LEFT CARD */}
+          
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 w-[300px] max-md:w-full">
 
             {/* CALL */}
