@@ -10,6 +10,8 @@
     "cssVariables": true,
     "prefix": ""
   },
+
+
   "iconLibrary": "lucide",
   "rtl": false,
   "aliases": {
@@ -23,4 +25,6 @@
   "menuAccent": "subtle",
   "registries": {}
 }
+
+
 

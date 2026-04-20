@@ -17,6 +17,7 @@ import Cart from './pages/Cart'
 
 
 
+
 const App = () => {
   
   return (
@@ -42,3 +43,4 @@ const App = () => {
 }
 
 export default App
+
