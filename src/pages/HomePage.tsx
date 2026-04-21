@@ -10,6 +10,9 @@ import { useTodo } from "../store/Todo"
 import { Eye, Heart } from "lucide-react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Rating from '@mui/material/Rating';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import Kalomka from "../assets/Frame 694.png"
 import TTime from '../assets/Frame 601.png'
 import images from "../assets/Frame 686.png"
@@ -189,80 +192,158 @@ const HomePage = () => {
                 </div>
 
 
-                <div className="mt-[70px]">
-                    <Swiper spaceBetween={30} slidesPerView="auto">
-                        {products?.slice(0, 4).map((item: any) => (
+                <div className="mt-[70px] flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/2">
+                        <Swiper spaceBetween={30} slidesPerView="auto">
+                            {products?.slice(0, 4).map((item: any) => (
 
-                            <SwiperSlide key={item.id} style={{ width: "300px" }}>
-                                <div className="w-[300px]">
+                                <SwiperSlide key={item.id} style={{ width: "300px" }}>
+                                    <div className="w-[300px]">
 
-                                    <div className="group relative overflow-hidden rounded-md bg-[#f5f5f5] px-4 py-4">
+                                        <div className="group relative overflow-hidden rounded-md bg-[#f5f5f5] px-4 py-4">
 
-                                        {item.hasDiscount && (
-                                            <span className="absolute left-3 top-3 z-20 rounded bg-red-500 px-3 py-1 text-xs text-white">
-                                                {t('sale')}
-                                            </span>
-                                        )}
+                                            {item.hasDiscount && (
+                                                <span className="absolute left-3 top-3 z-20 rounded bg-red-500 px-3 py-1 text-xs text-white">
+                                                    {t('sale')}
+                                                </span>
+                                            )}
 
-                                        {/* Icons */}
-                                        <div className="absolute right-3 top-3 z-20 flex flex-col gap-2">
-                                            {HeartBtn(item)}
-                                            <button className="flex h-9 w-9 items-center justify-center rounded-full bg-white">
-                                                <Link to={`/Info/${item.id}`}>
-                                                    <Eye size={18} />
-                                                </Link>
+                                            {/* Icons */}
+                                            <div className="absolute right-3 top-3 z-20 flex flex-col gap-2">
+                                                {HeartBtn(item)}
+                                                <button className="flex h-9 w-9 items-center justify-center rounded-full bg-white">
+                                                    <Link to={`/Info/${item.id}`}>
+                                                        <Eye size={18} />
+                                                    </Link>
+                                                </button>
+                                            </div>
+
+                                            {/* Image */}
+                                            <div className="flex h-[200px] items-center justify-center">
+                                                <img
+                                                    src={`https://store-api.softclub.tj/images/${item.image}`}
+                                                    alt={item.productName}
+                                                    className="max-h-[160px] object-contain transition group-hover:scale-105"
+                                                />
+                                            </div>
+
+                                            <button
+                                                onClick={() => {
+                                                    addToCart(item)
+                                                }}
+                                                className="absolute bottom-0 left-0 w-full translate-y-full bg-black py-3 text-white opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100"
+                                            >
+                                                Add To Cart
                                             </button>
                                         </div>
 
-                                        {/* Image */}
-                                        <div className="flex h-[200px] items-center justify-center">
-                                            <img
-                                                src={`https://store-api.softclub.tj/images/${item.image}`}
-                                                alt={item.productName}
-                                                className="max-h-[160px] object-contain transition group-hover:scale-105"
+                                        <div className="pt-4">
+                                            <h3 className="text-base font-medium">
+                                                {item.productName}
+                                            </h3>
+
+                                            <div className="mt-2 flex items-center gap-3">
+                                                <span className="text-red-500 font-semibold">
+                                                    ${item.hasDiscount ? item.discountPrice : item.price}
+                                                </span>
+
+                                                {item.hasDiscount && (
+                                                    <span className="line-through text-gray-400">
+                                                        ${item.price}
+                                                    </span>
+                                                )}
+                                            </div>
+
+                                            <Rating
+                                                name="simple-uncontrolled"
+                                                onChange={(_event, newValue) => {
+                                                    console.log(newValue);
+                                                }}
+                                                defaultValue={2}
                                             />
                                         </div>
 
-                                        <button
-                                            onClick={() => {
-                                                addToCart(item)
-                                            }}
-                                            className="absolute bottom-0 left-0 w-full translate-y-full bg-black py-3 text-white opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100"
-                                        >
-                                            {t('addToCart')}
-                                        </button>
                                     </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
 
-                                    <div className="pt-4">
-                                        <h3 className="text-base font-medium">
-                                            {item.productName}
-                                        </h3>
+                    <div className="w-full md:w-1/2">
+                        <Swiper spaceBetween={30} slidesPerView="auto">
+                            {products?.slice(4, 8).map((item: any) => (
+                                <SwiperSlide key={item.id} style={{ width: "300px" }}>
+                                    <div className="w-[300px]">
 
-                                        <div className="mt-2 flex items-center gap-3">
-                                            <span className="text-red-500 font-semibold">
-                                                ${item.hasDiscount ? item.discountPrice : item.price}
-                                            </span>
+                                        <div className="group relative overflow-hidden rounded-md bg-[#f5f5f5] px-4 py-4">
 
                                             {item.hasDiscount && (
-                                                <span className="line-through text-gray-400">
-                                                    ${item.price}
+                                                <span className="absolute left-3 top-3 z-20 rounded bg-red-500 px-3 py-1 text-xs text-white">
+                                                    {t('sale')}
                                                 </span>
                                             )}
+
+                                            {/* Icons */}
+                                            <div className="absolute right-3 top-3 z-20 flex flex-col gap-2">
+                                                {HeartBtn(item)}
+                                                <button className="flex h-9 w-9 items-center justify-center rounded-full bg-white">
+                                                    <Link to={`/Info/${item.id}`}>
+                                                        <Eye size={18} />
+                                                    </Link>
+                                                </button>
+                                            </div>
+
+                                            {/* Image */}
+                                            <div className="flex h-[200px] items-center justify-center">
+                                                <img
+                                                    src={`https://store-api.softclub.tj/images/${item.image}`}
+                                                    alt={item.productName}
+                                                    className="max-h-[160px] object-contain transition group-hover:scale-105"
+                                                />
+
+                                            </div>
+                                            <button
+                                                onClick={() => {
+                                                    addToCart(item)
+                                                }}
+                                                className="absolute bottom-0 left-0 w-full translate-y-full bg-black py-3 text-white opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100"
+                                            >
+                                                Add To Cart
+                                            </button>
                                         </div>
 
-                                        <Rating
-                                            name="simple-uncontrolled"
-                                            onChange={(_event, newValue) => {
-                                                console.log(newValue);
-                                            }}
-                                            defaultValue={2}
-                                        />
-                                    </div>
 
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                                        <div className="pt-4">
+                                            <h3 className="text-base font-medium">
+                                                {item.productName}
+                                            </h3>
+
+                                            <div className="mt-2 flex items-center gap-3">
+                                                <span className="text-red-500 font-semibold">
+                                                    ${item.hasDiscount ? item.discountPrice : item.price}
+                                                </span>
+
+                                                {item.hasDiscount && (
+                                                    <span className="line-through text-gray-400">
+                                                        ${item.price}
+                                                    </span>
+                                                )}
+                                            </div>
+
+                                            <Rating
+                                                name="simple-uncontrolled"
+                                                onChange={(_event, newValue) => {
+                                                    console.log(newValue);
+                                                }}
+                                                defaultValue={2}
+                                            />
+                                        </div>
+
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
                 </div>
                 <Link to={"/ProductDetailsPage"}>
                     <div className="flex justify-center mt-[40px]">
@@ -353,81 +434,6 @@ const HomePage = () => {
                     {t('thisMonth')}
                 </h1>
 
-                <div className="mt-[70px]">
-                    <Swiper spaceBetween={30} slidesPerView="auto">
-                        {products?.slice(4, 8).map((item: any) => (
-                            <SwiperSlide key={item.id} style={{ width: "300px" }}>
-                                <div className="w-[300px]">
-
-                                    <div className="group relative overflow-hidden rounded-md bg-[#f5f5f5] px-4 py-4">
-
-                                        {item.hasDiscount && (
-                                            <span className="absolute left-3 top-3 z-20 rounded bg-red-500 px-3 py-1 text-xs text-white">
-                                                {t('sale')}
-                                            </span>
-                                        )}
-
-                                        {/* Icons */}
-                                        <div className="absolute right-3 top-3 z-20 flex flex-col gap-2">
-                                            {HeartBtn(item)}
-                                            <button className="flex h-9 w-9 items-center justify-center rounded-full bg-white">
-                                                <Link to={`/Info/${item.id}`}>
-                                                    <Eye size={18} />
-                                                </Link>
-                                            </button>
-                                        </div>
-
-                                        {/* Image */}
-                                        <div className="flex h-[200px] items-center justify-center">
-                                            <img
-                                                src={`https://store-api.softclub.tj/images/${item.image}`}
-                                                alt={item.productName}
-                                                className="max-h-[160px] object-contain transition group-hover:scale-105"
-                                            />
-
-                                        </div>
-                                        <button
-                                            onClick={() => {
-                                                addToCart(item)
-                                            }}
-                                            className="absolute bottom-0 left-0 w-full translate-y-full bg-black py-3 text-white opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100"
-                                        >
-                                            Add To Cart
-                                        </button>
-                                    </div>
-                                    
-
-                                    <div className="pt-4">
-                                        <h3 className="text-base font-medium">
-                                            {item.productName}
-                                        </h3>
-
-                                        <div className="mt-2 flex items-center gap-3">
-                                            <span className="text-red-500 font-semibold">
-                                                ${item.hasDiscount ? item.discountPrice : item.price}
-                                            </span>
-
-                                            {item.hasDiscount && (
-                                                <span className="line-through text-gray-400">
-                                                    ${item.price}
-                                                </span>
-                                            )}
-                                        </div>
-
-                                        <Rating
-                                            name="simple-uncontrolled"
-                                            onChange={(_event, newValue) => {
-                                                console.log(newValue);
-                                            }}
-                                            defaultValue={2}
-                                        />
-                                    </div>
-
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
             </div>
 
             <div className="flex justify-center mt-[60px] max-sm:px-4">
@@ -495,7 +501,7 @@ const HomePage = () => {
                                     }}
                                     className="absolute bottom-0 left-0 w-full translate-y-full bg-black py-3 text-white opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100"
                                 >
-                                    {t('addToCart')}
+                                    Add To Cart
                                 </button>
                             </div>
 

@@ -1,93 +1,74 @@
-# React + TypeScript + Vite
+# 🛒 Internet Magazine - Modern E-commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![i18next](https://img.shields.io/badge/i18next-26A69A?style=for-the-badge&logo=i18next&logoColor=white)
 
-Currently, two official plugins are available:
+A feature-rich, high-performance e-commerce web application built with **React**, **TypeScript**, and **Vite**. This platform offers a seamless shopping experience with multi-language support, responsive design, and dynamic product management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Key Features
 
-## React Compiler
+| Feature | Description |
+| :--- | :--- |
+| 🌍 **Multi-language** | English, Russian, and Tajik localization |
+| ⚡ **Fast Slider** | Interactive displays using `Swiper.js` |
+| ⏲️ **Flash Sales** | Real-time countdown timer for deals |
+| 🛒 **Cart & Wishlist** | Persistent storage for shopping lists |
+| 📱 **Responsive** | Mobile-first design with Tailwind CSS |
+| 🌙 **Dark Mode** | Seamless switching between themes |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technology Stack
 
-## Expanding the ESLint configuration
+### Frontend Core
+*   **React 19** - Component-based architecture
+*   **TypeScript** - Type safety and better developer experience
+*   **Vite** - Lightning-fast build tool
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### UI & Styling
+*   **Tailwind CSS** - Modern utility-first styling
+*   **MUI (Rating)** - Accessible star ratings
+*   **Ant Design** - Premium UI components
+*   **Lucide Icons** - Clean and consistent iconography
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### State & Logic
+*   **Zustand** - Light & fast state management
+*   **i18next** - Framework for internationalization
+*   **Axios** - Promise based HTTP client for APIs
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone the repo:**
+    ```bash
+    git clone [repository-url]
+    ```
+2.  **Install tools:**
+    ```bash
+    npm install
+    ```
+3.  **Launch Local Dev Server:**
+    ```bash
+    npm run dev
+    ```
+4.  **Create Production Build:**
+    ```bash
+    npm run build
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📂 Architecture
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```text
+src/
+ ├── assets/      # Static images and icons
+ ├── component/   # Reusable UI components
+ ├── locales/     # Translation JSON files
+ ├── pages/       # Route views (Home, Cart, etc.)
+ ├── store/       # Zustand store definitions
+ └── utils/       # Storage and logic helpers
 
-===================================================================================
-
-
-# Internet Magazine
-
-This is an e-commerce project built with React + TypeScript + Tailwind.
-
-## Features
-- Product list
-- Cart
-- Wishlist
-- Responsive design
-
-## Installation
-npm install
-npm run dev
 
 ## Author
 Shahobiddinzoda Firuz
