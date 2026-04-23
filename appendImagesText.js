@@ -30,6 +30,7 @@ const translations = {
 
 const localesDir = path.join(__dirname, 'src', 'locales');
 
+
 ['en', 'ru', 'tj'].forEach(lang => {
   const filePath = path.join(localesDir, `${lang}.json`);
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
