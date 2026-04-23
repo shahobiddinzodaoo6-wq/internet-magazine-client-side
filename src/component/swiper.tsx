@@ -28,6 +28,8 @@ const slides = [
 
 
 
+
+
 const Swiperr = () => {
   return (
     <div className="max-w-[1000px] mx-auto mt-6 max-sm:w-[500px]">
@@ -77,4 +79,9 @@ const Swiperr = () => {
   )
 }
 
+
+
 export default Swiperr
+
+
+
