@@ -46,3 +46,6 @@ const localesDir = path.join(__dirname, 'src', 'locales');
   data.translation = { ...data.translation, ...translations[lang] };
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 });
+
+
+
