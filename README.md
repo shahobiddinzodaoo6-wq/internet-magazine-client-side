@@ -10,7 +10,10 @@
 
 A feature-rich, high-performance e-commerce web application built with **React**, **TypeScript**, and **Vite**. This platform offers a seamless shopping experience with multi-language support, responsive design, and dynamic product management.
 
+
+
 ## 🌟 Key Features
+
 
 | Feature | Description |
 | :--- | :--- |
@@ -82,6 +85,7 @@ Shahobiddinzoda Firuz
 
 
 A full-featured e-commerce SPA built with React 19, TypeScript, Vite, Tailwind CSS, Zustand, and i18next — supporting English, Russian & Tajik languages, dark mode, cart, wishlist, checkout, and product detail pages.
+
 
 
 ------------------------------------------------------------------------------------------
