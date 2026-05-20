@@ -209,3 +209,5 @@ const localesDir = path.join(__dirname, 'src', 'locales');
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 });
 
+
+
