@@ -202,12 +202,15 @@ const translations = {
 
 const localesDir = path.join(__dirname, 'src', 'locales');
 
+
+
 ['en', 'ru', 'tj'].forEach(lang => {
   const filePath = path.join(localesDir, `${lang}.json`);
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   data.translation = { ...data.translation, ...translations[lang] };
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 });
+
 
 
 
